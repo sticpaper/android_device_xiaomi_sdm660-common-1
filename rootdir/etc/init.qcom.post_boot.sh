@@ -382,9 +382,9 @@ function configure_zram_parameters() {
 }
 
 function configure_read_ahead_kb_values() {
-    echo 128 > /sys/block/mmcblk0/bdi/read_ahead_kb
+    echo 0 > /sys/block/mmcblk0/queue/add_random
     echo 128 > /sys/block/mmcblk0/queue/read_ahead_kb
-    echo 128 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
+    echo 0 > /sys/block/mmcblk0rpmb/queue/add_random
     echo 128 > /sys/block/mmcblk0rpmb/queue/read_ahead_kb
     echo 128 > /sys/block/dm-0/queue/read_ahead_kb
     echo 128 > /sys/block/dm-1/queue/read_ahead_kb
